@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node server</title>
+	<script src="js/webodf.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        function init() {
+            var odfelement = document.getElementById("odf"),
+            odfcanvas = new odf.OdfCanvas(odfelement);
+            // odfcanvas.load("odt/inHospitalrecord.odt");
+            odfcanvas.load("odt/inHospitalrecord.odt");
+        }
+        window.setTimeout(init, 0);
+    </script>
+</head>
+<body>
+	<h1>node server</h1>
+	<div id="odf"></div>
+</body>
+</html>

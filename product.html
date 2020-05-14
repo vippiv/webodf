@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>product</title>
+	<script src="js/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body style="width:100%; height:100%; margin:0px; padding:0px" onload="createEditor();">
+	<h1>product</h1>
+	<div id="editorContainer" style="width:100%; height:100%; margin:0px; padding:0px">
+	</div>
+
+	<script type="text/javascript">
+		console.log(createEditor)
+Wodo.createTextEditor('editorContainer', {
+    allFeaturesEnabled: true,
+    userData: {
+        fullName: "Tim Lee",
+        color:    "blue"
+    }
+}, function (err, editor) {
+    if (err) {
+        // something failed unexpectedly, deal with it (here just a simple alert)
+        alert(err);
+        return;
+    }
+    editor.openDocumentFromUrl("odt/OpenDocument-v1.2-os-part3.odt", function(err) {
+        if (err) {
+            // something failed unexpectedly, deal with it (here just a simple alert)
+            alert("There was an error on opening the document: " + err);
+        }
+    });
+});
+	</script>
+</body>
+</html>
