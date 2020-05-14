@@ -6,3 +6,12 @@ webodf texteditor
 
 # 插件来源
 https://webodf.org/
+
+# 应用
+执行 node server.js
+
+http://localhost:9526/texteditor.html
+
+http://localhost:9526/localeditor.html
+
+http://localhost:9526/revieweditor.html
